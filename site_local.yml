@@ -1,0 +1,9 @@
+site:
+  title: Pi3r
+content:
+  sources:
+  - url: /notebook
+    branches: master
+ui:
+  bundle:
+    url: https://github.com/PierreR/antora-ui/releases/download/v0.2/ui-bundle.zip
