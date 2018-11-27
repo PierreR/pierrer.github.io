@@ -8,7 +8,7 @@ site:
 	docker run --user $$UID -v `pwd`:/antora --rm antora/antora site.yml --cache-dir /antora/.cache --pull
 
 local:
-	@docker run --user $$UID -v `pwd`:/antora -v $(pi3r_dir)/notebook:/notebook --rm antora/antora generate --cache-dir /antora/.cache --pull site_local.yml
+	@docker run --user $$UID -v `pwd`:/antora -v $(pi3r_dir)/notebook:/notebook -v $(pi3r_dir)/devbox:/devbox --rm antora/antora generate --cache-dir /antora/.cache --pull site_local.yml
 
 debug:
 	@docker run -it --entrypoint ash --user $$UID -v `pwd`:/antora -v $(pi3r_dir)/notebook:/notebook --rm antora/antora

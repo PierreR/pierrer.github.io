@@ -1,9 +1,15 @@
 site:
-  title: Pi3r
+  title: PierreR (pi3r)
+  url: https://pi3r.be
+  start_page: notebook::nix/index.adoc
 content:
   sources:
   - url: /notebook
-    branches: master
+    branches: HEAD
+  - url: /devbox
+    start_path: docs
+    branches: HEAD
 ui:
   bundle:
-    url: https://github.com/PierreR/antora-ui/releases/download/v0.2/ui-bundle.zip
+    url: https://github.com/PierreR/antora-ui/releases/download/v0.5/ui-bundle.zip
+  supplemental_files: ./supplemental-ui

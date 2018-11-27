@@ -1,0 +1,31 @@
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="{{or site.url (or siteRootUrl siteRootPath)}}">
+        <div class="navbar-item" >{{site.title}}</div>
+      </a>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <div class="navbar-item">
+          <input id="search-input" type="text" placeholder="Search docs" autofocus>
+        </div>
+        <a class="navbar-item" href="/notebook">Notebook</a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Projects</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="/devbox">Devbox</a>
+          </div>
+        <div class="navbar-item">
+          <span class="control">
+            <a class="button is-primary" href="{{uiRootPath}}/attachments/CV_PRadermecker_en_2019.pdf">Curriculum Vitae</a>
+          </span>
+        </div>
+        <a class="navbar-item" href="https://github.com/PierreR" alt="Github">
+          <img src="{{uiRootPath}}/img/github-mark.png" alt="Github" title="Github" />
+        </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
