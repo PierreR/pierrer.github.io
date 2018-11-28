@@ -4,7 +4,6 @@
   flex-grow: 1;
   -ms-flex-pack: end;
   -webkit-box-pack: end;
-  justify-content: flex-end;
 }
 
 .algolia-autocomplete .ds-dropdown-menu [class^=ds-dataset-] {
