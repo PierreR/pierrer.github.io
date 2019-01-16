@@ -1,0 +1,3 @@
+[submodule "docsearch-scraper"]
+	path = docsearch-scraper
+	url = https://github.com/algolia/docsearch-scraper.git

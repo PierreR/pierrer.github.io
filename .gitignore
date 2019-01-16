@@ -1,3 +1,5 @@
 *.tar.gz
 build
 .cache
+requirements.nix
+requirements_*
