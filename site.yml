@@ -9,6 +9,9 @@ content:
   - url: https://github.com/CIRB/devbox.git
     start_path: docs
     branches: master
+asciidoc:
+  attributes:
+    example-caption: ~
 ui:
   bundle:
     url: https://github.com/PierreR/antora-ui/releases/download/v0.5/ui-bundle.zip

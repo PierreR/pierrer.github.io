@@ -9,6 +9,9 @@ content:
   - url: /devbox
     start_path: docs
     branches: HEAD
+asciidoc:
+  attributes:
+    example-caption: ~
 ui:
   bundle:
     url: https://github.com/PierreR/antora-ui/releases/download/v0.5/ui-bundle.zip
