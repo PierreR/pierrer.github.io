@@ -14,5 +14,5 @@ asciidoc:
     example-caption: ~
 ui:
   bundle:
-    url: https://github.com/PierreR/antora-ui/releases/download/v0.6a/ui-bundle.zip
+    url: https://github.com/PierreR/antora-ui/releases/download/v0.6b/ui-bundle.zip
   supplemental_files: ./supplemental-ui
