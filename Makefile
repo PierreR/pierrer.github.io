@@ -11,7 +11,11 @@ site:
 debug:
 	@docker run -it --entrypoint ash --user $$UID -v `pwd`:/antora -v $(pi3r_dir)/notebook:/notebook --rm antora/antora
 
-local:
+
+ui-bundle.zip: ../antora-ui/build/ui-bundle.zip
+	cp $^ .
+
+local: ui-bundle.zip
 	@docker run --user $$UID -v `pwd`:/antora -v $(pi3r_dir)/notebook:/notebook -v ~/bootstrap:/devbox --rm antora/antora generate --cache-dir /antora/.cache --pull site_local.yml
 
 preview:
