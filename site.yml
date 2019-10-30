@@ -6,7 +6,7 @@ content:
   sources:
   - url: https://github.com/pierrer/notebook.git
     branches: master
-  - url: https://github.com/CIRB/devbox.git
+  - url: https://github.com/pierrer/devbox.git
     start_path: docs
     branches: master
 asciidoc:

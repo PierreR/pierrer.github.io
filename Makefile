@@ -1,22 +1,21 @@
 .PHONY: build clean scraper
 
 pi3r_dir := ~/projects/pi3r
-mount_dir ?= /vagrant/shared
+mount_dir ?= ${SHARED_DIR}
 
 build: clean site tar
 
 site:
-	docker run --user $$UID -v `pwd`:/antora --rm antora/antora site.yml --cache-dir /antora/.cache --pull
+	antora generate --pull site.yml
 
 debug:
 	@docker run -it --entrypoint ash --user $$UID -v `pwd`:/antora -v $(pi3r_dir)/notebook:/notebook --rm antora/antora
-
 
 ui-bundle.zip: ../antora-ui/build/ui-bundle.zip
 	cp $^ .
 
 local: ui-bundle.zip
-	@docker run --user $$UID -v `pwd`:/antora -v $(pi3r_dir)/notebook:/notebook -v ~/bootstrap:/devbox --rm antora/antora generate --cache-dir /antora/.cache --pull site_local.yml
+	antora generate --pull site_local.yml
 
 preview:
 	pushd build/site ; nohup python -m SimpleHTTPServer >/dev/null 2>&1 & echo  "$$!" >/tmp/pierrer-preview-python.pid ; popd

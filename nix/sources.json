@@ -1,0 +1,38 @@
+{
+    "niv": {
+        "branch": "master",
+        "description": "Easy dependency management for Nix projects",
+        "homepage": "https://github.com/nmattia/niv",
+        "owner": "nmattia",
+        "repo": "niv",
+        "rev": "1dd094156b249586b66c16200ecfd365c7428dc0",
+        "sha256": "1b2vjnn8iac5iiqszjc2v1s1ygh0yri998c0k3s4x4kn0dsqik21",
+        "type": "tarball",
+        "url": "https://github.com/nmattia/niv/archive/1dd094156b249586b66c16200ecfd365c7428dc0.tar.gz",
+        "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
+    },
+    "nixpkgs": {
+        "branch": "nixos-unstable",
+        "description": "A read-only mirror of NixOS/nixpkgs tracking the released channels. Send issues and PRs to",
+        "homepage": "https://github.com/NixOS/nixpkgs",
+        "owner": "NixOS",
+        "repo": "nixpkgs-channels",
+        "rev": "1c40ee6fc44f7eb474c69ea070a43247a1a2c83c",
+        "sha256": "0xvgx4zsz8jk125xriq7jfp59px8aa0c5idbk25ydh2ly7zmb2df",
+        "type": "tarball",
+        "url": "https://github.com/NixOS/nixpkgs-channels/archive/1c40ee6fc44f7eb474c69ea070a43247a1a2c83c.tar.gz",
+        "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
+    },
+    "pypi2nix": {
+        "branch": "master",
+        "description": "Generate Nix expressions for Python packages [maintainer=@seppeljordan]",
+        "homepage": "",
+        "owner": "nix-community",
+        "repo": "pypi2nix",
+        "rev": "e452f49d80711d9de7f385d95fa3188f7987ce57",
+        "sha256": "0ik279x4h6g3gb77v71z85nkrzcm1pa3wy5y28cakgh4y332bnp2",
+        "type": "tarball",
+        "url": "https://github.com/nix-community/pypi2nix/archive/e452f49d80711d9de7f385d95fa3188f7987ce57.tar.gz",
+        "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
+    }
+}

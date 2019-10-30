@@ -4,11 +4,10 @@ site:
   start_page: notebook::nix/index.adoc
 content:
   sources:
-  - url: /notebook
+  - url: ../notebook
     branches: HEAD
-  - url: /devbox
+  - url: ../devbox
     start_path: docs
-    branches: HEAD
 asciidoc:
   attributes:
     example-caption: ~
