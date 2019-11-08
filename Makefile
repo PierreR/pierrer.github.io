@@ -8,9 +8,6 @@ build: clean site tar
 site:
 	antora generate --pull site.yml
 
-debug:
-	@docker run -it --entrypoint ash --user $$UID -v `pwd`:/antora -v $(pi3r_dir)/notebook:/notebook --rm antora/antora
-
 ui-bundle.zip: ../antora-ui/build/ui-bundle.zip
 	cp $^ .
 
