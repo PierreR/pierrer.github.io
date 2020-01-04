@@ -1,16 +1,17 @@
-.navbar-brand .navbar-item + .navbar-item {
+.navbar-brand .navbar-item + .navbar-item.search {
   -ms-flex-positive: 1;
   -webkit-box-flex: 1;
   flex-grow: 1;
   -ms-flex-pack: end;
   -webkit-box-pack: end;
+  justify-content: flex-end;
 }
 
 .algolia-autocomplete .ds-dropdown-menu [class^=ds-dataset-] {
   max-height: calc(100vh - 3.25rem);
 }
 
-.navbar-end button.search {
+.navbar-brand button.search {
     align-items: center;
     background: none;
     border: 0;
@@ -19,7 +20,7 @@
     padding: 0 0.5rem;
 }
 
-.navbar-end button.search::before {
+.navbar-brand button.search::before {
     content: "";
     background: url(../img/search.svg) 50% 50% no-repeat;
     background-size: cover;
@@ -28,7 +29,7 @@
     width: 1.25rem;
 }
 
-.navbar-end button.search span {
+.navbar-brand button.search span {
     color: var(--color-navbar-text);
     padding-left: 0.5rem;
 }

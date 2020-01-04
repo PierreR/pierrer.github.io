@@ -1,10 +1,7 @@
-let
-  sources = import ./nix/sources.nix;
-  pkgs = import sources.nixpkgs {};
-  pypi2nix = import sources.pypi2nix {};
-in pkgs.mkShell {
+with import <nixpkgs> {};
+mkShell {
   buildInputs = [
-    pypi2nix
+    pkgs.pypi2nix
     pkgs.antora
   ];
 }

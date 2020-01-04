@@ -15,7 +15,7 @@ local: ui-bundle.zip
 	antora generate --pull site_local.yml
 
 preview:
-	pushd build/site ; nohup python -m SimpleHTTPServer >/dev/null 2>&1 & echo  "$$!" >/tmp/pierrer-preview-python.pid ; popd
+	pushd build/site ; nohup python -m http.server >/dev/null 2>&1 & echo  "$$!" >/tmp/pierrer-preview-python.pid ; popd
 	echo "Server running"
 
 tar:

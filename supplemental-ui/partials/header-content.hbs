@@ -7,14 +7,14 @@
       <a class="navbar-item" href="{{or site.url (or siteRootUrl siteRootPath)}}">
           <div class="navbar-item" >{{site.title}}</div>
       </a>
+      <div class="navbar-item search">
+          <button type="button" class="search">
+          </button>
+          <input id="search-input" class="searchbox" type="search" placeholder="Search docs" autofocus />
+      </div>
     </div>
     <div id="topbar-nav" class="navbar-menu">
       <div class="navbar-end">
-        <div class="navbar-item search">
-            <button type="button" class="search">
-            </button>
-            <input id="search-input" class="searchbox" type="search" placeholder="Search docs" autofocus />
-        </div>
         <a class="navbar-item" href="/notebook">Notebook</a>
         <div class="navbar-item has-dropdown is-hoverable">
           <a class="navbar-link" href="#">Projects</a>
