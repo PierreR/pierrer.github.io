@@ -6,8 +6,9 @@ content:
   sources:
   - url: ../notebook
     branches: HEAD
-  - url: ../devbox
-    start_path: docs
+  - url: ~/projects/bric/cicd/devbox
+    branches: HEAD
+    start_path: bootstrap/docs
 asciidoc:
   attributes:
     example-caption: ~
