@@ -1,7 +1,7 @@
 with import <nixpkgs> {};
 mkShell {
   buildInputs = [
-    pkgs.pypi2nix
-    pkgs.antora-wrapper
+    antora-wrapper
+    (python3.withPackages (ps: [ps.requests ]))
   ];
 }

@@ -11,12 +11,12 @@ site:
 ui-bundle.zip: ../antora-ui/build/ui-bundle.zip
 	cp $^ .
 
-local: ui-bundle.zip
-	antora generate --pull site_local.yml
+local:
+	antora generate --fetch site_local.yml
 
 preview:
-	pushd build/site ; nohup python -m http.server >/dev/null 2>&1 & echo  "$$!" >/tmp/pierrer-preview-python.pid ; popd
-	echo "Server running"
+	pushd build/site ; nohup python -m http.server 8000 >/dev/null 2>&1 & echo  "$$!" >/tmp/pierrer-preview-python.pid ; popd
+	@echo "Server running on port 8000"
 
 tar:
 	@pushd build/site ; tar -zcvf ../../pi3r-site.tar.gz * >/dev/null 2>&1 ; popd; cp pi3r-site.tar.gz $(mount_dir)
@@ -26,7 +26,7 @@ publish:
 	echo "todo: automate the pushing of the tar to pi3r.be"
 
 requirements.nix:
-	pypi2nix -r requirements.txt 
+	pypi2nix -r requirements.txt
 
 scraper: requirements.nix docsearch-scraper/.env
 	nix-shell requirements.nix -A interpreter --run "pushd docsearch-scraper; ./docsearch docker:build; popd"

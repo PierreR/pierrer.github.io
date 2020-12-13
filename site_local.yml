@@ -6,13 +6,11 @@ content:
   sources:
   - url: ../notebook
     branches: HEAD
-  - url: ~/projects/bric/cicd/devbox
-    branches: HEAD
-    start_path: bootstrap/docs
 asciidoc:
   attributes:
     example-caption: ~
 ui:
   bundle:
-    url: ./ui-bundle.zip
+    url: https://gitlab.com/antora/antora-ui-default/-/jobs/artifacts/master/raw/build/ui-bundle.zip?job=bundle-stable
+    snapshot: true
   supplemental_files: ./supplemental-ui
