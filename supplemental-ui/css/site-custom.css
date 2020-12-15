@@ -31,3 +31,11 @@ mark {
 .doc .big {
     font-size: 125%;
 }
+
+.nav-panel-explore .context {
+    cursor: auto;
+}
+
+.nav-panel-explore .context .version::after {
+    background: none !important;
+}
