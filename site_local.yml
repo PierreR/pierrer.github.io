@@ -1,6 +1,5 @@
 site:
   title: 𝛑3r
-  url: https://pi3r.be
   start_page: notebook::nix/index.adoc
 content:
   sources:
