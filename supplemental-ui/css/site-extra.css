@@ -75,3 +75,20 @@
     width: 200px;
   }
 }
+
+.doc a.external {
+  position:relative
+ }
+.doc a.external::after {
+  position:relative;
+  display:inline-block;
+  margin:0 0.1rem;
+  content: url(../img/external-link.svg);
+  transition:all .2s linear;
+  top: -.2rem;
+  opacity: 0.5;
+ }
+ .doc a.external:hover::after {
+  top:-12px;
+  opacity:0
+ }

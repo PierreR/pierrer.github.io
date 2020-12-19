@@ -2,3 +2,4 @@
 build
 .cache
 *.zip
+node_modules
