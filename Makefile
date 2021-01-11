@@ -30,14 +30,8 @@ tar:
 publish:
 	echo "todo: automate the pushing of the tar to pi3r.be"
 
-requirements.nix:
-	pypi2nix -r requirements.txt
-
-scraper: requirements.nix docsearch-scraper/.env
-	nix-shell requirements.nix -A interpreter --run "pushd docsearch-scraper; ./docsearch docker:build; popd"
-
-indices: requirements.nix docsearch-scraper/.env
-	nix-shell requirements.nix -A interpreter --run "pushd docsearch-scraper; ./docsearch docker:run ../config.json; popd"
+indices:
+	docker run -it --env-file=.env-algolia -e "CONFIG=$$(cat ./config.json | jq -r tostring)" algolia/docsearch-scraper
 
 clean:
 	@rm -rf build/site
